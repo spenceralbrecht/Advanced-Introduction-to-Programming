@@ -1,0 +1,17 @@
+// errors
+// Spencer Albrecht
+// salbrech (1488178)
+// lab6
+// Tests that the LetterHome.class file runs correctly
+
+Error 1 - The program outpt for the second sentence code using the fourth modifier should be "The weather here has been cold.", however, the actual program output is "The weather here has been hot."
+
+Error 2 - The program output for the third sentence code using the third modifier should be "I plan to come home for a visit next weekend.", however, the actual program output is "I plan to come home for a visit last weekend."
+
+Error 3 - The program output for the fourth sentence is "I have to buy another books for one of my classes." when the correct output should be "I have to buy another book for one of my classes."
+
+Error 4 - When the sentence code is out of range the program is required to print "x is not a valid sentence code" where x is the integer entered, however, the program actually outputs "x is a valid sentence code" where x is the integer entered.
+
+Error 5 - There may be an error when a negative number is entered for the modifier in the fourth sentence, the output is in the format "$-x" when x is the amount of money and the format should probably be "-$x". However, this output is not specified in the description of how the program should run so it could or could not be an error.
+
+Error 6 - There is an error with sentence five modifier two because the output does not have a period when it should
