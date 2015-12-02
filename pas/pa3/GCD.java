@@ -2,7 +2,7 @@
 // Spencer Albrecht
 // 1488178
 // Programming Assignment 3
-// Finds the greatest common divisor of two numbers 
+// Finds the greatest common divisor of two numbers
 
 import java.util.Scanner;
 
@@ -14,55 +14,72 @@ public class GCD{
         int num2 = 0;
         int input1 = 0;
         int input2 = 0;
+        int[] inputArray = new int[2];
         int temp = 0;
         int smallNum,bigNum;
-        int quotient = 0; 
+        int quotient = 0;
         int remainder = 0;
-        boolean validNum = false;
+        boolean validNum = true;
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter a positive integer: ");
+
 
         for (int i = 0; i < 2; i++) {
-            // Runs if the number the user entered is not a positive int
-            while (!validNum) {
+          if (i == 0) {
+            System.out.print("Enter a positive integer: ");
+          }
+          else {
+            System.out.print("Enter another positive integer: ");
+          }
 
-                if (input.hasNextInt()) {
-                    temp = input.nextInt();
-                    // If the correct input is entered, store it in num1 or num2
-                    // based on whether num1 has already been assigned
-                    if (temp >= 0) { 
-                        validNum = true;
-                        if (num1 == 0) {
-                            num1 = temp; 
-                        }
-                        else {
-                            num2 = temp;
-                        } 
-                        break;
-                    }
-                }
+          while (true) {
+              // While loop that gets the first number
+              while (!input.hasNextInt() || !validNum) {
+                  // Throw away the token
+                  input.next();
+                  System.out.print("Please enter a positive integer: ");
+              }
 
-                // Prompt for if the first number entered was not a positive int      
-		System.out.print("Please enter a positive integer: ");
-                input.next();
-	
-            } 
-            if (num2 == 0) {
-                // Prompt for if the second number entered was not a positive int
-                System.out.print("Please enter another positive integer: ");
-                validNum = false; 
-            }
+              inputArray[i] = input.nextInt();
+              if (inputArray[i] > 0) {
+                  validNum = true;
+                  break;
+              }
+              System.out.print("Please enter a positive integer: ");
+          }
+          validNum = true;
         }
 
+        //System.out.print("Please enter another positive integer: ");
+
+        // // While loop that gets the second number
+        // while (!validNum) {
+        //
+        //     if (input.hasNextInt()) {
+        //         temp = input.nextInt();
+        //         // If the correct input is entered, store it in num1 or num2
+        //         // based on whether num1 has already been assigned
+        //         if (temp > 0) {
+        //             validNum = true;
+        //             num2 = temp;
+        //         }
+        //       }
+        //
+        //       // Prompt for if the first number entered was not a positive int
+	      //       System.out.print("Please enter a positive integer: ");
+        //       input.next();
+        //
+        //   }
+
+
         // Save the order the numbers were entered for end print statements
-        input1 = num1;
-        input2 = num2;
+        input1 = inputArray[0];
+        input2 = inputArray[1];
 
         // Set num1 to the larger number and num2 to the smaller number
-        bigNum = Math.max(num1,num2);
-        smallNum = Math.min(num1,num2);
+        bigNum = Math.max(input1,input2);
+        smallNum = Math.min(input1,input2);
         num1 = bigNum;
         num2 = smallNum;
 
