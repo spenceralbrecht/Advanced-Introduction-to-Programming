@@ -51,27 +51,6 @@ public class GCD{
           validNum = true;
         }
 
-        //System.out.print("Please enter another positive integer: ");
-
-        // // While loop that gets the second number
-        // while (!validNum) {
-        //
-        //     if (input.hasNextInt()) {
-        //         temp = input.nextInt();
-        //         // If the correct input is entered, store it in num1 or num2
-        //         // based on whether num1 has already been assigned
-        //         if (temp > 0) {
-        //             validNum = true;
-        //             num2 = temp;
-        //         }
-        //       }
-        //
-        //       // Prompt for if the first number entered was not a positive int
-	      //       System.out.print("Please enter a positive integer: ");
-        //       input.next();
-        //
-        //   }
-
 
         // Save the order the numbers were entered for end print statements
         input1 = inputArray[0];
