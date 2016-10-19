@@ -1,6 +1,6 @@
-## Computer Science 12A
+## Accelerated Introduction To Programming
 
-Accelerated introduction to programming. Students write medium-sized programs in both Java and C.
+Students write medium-sized programs in both Java and C.
 
 Class topics include: 
 * Functions 
